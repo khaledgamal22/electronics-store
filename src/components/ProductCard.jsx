@@ -17,7 +17,7 @@ const ProductCard = ({ product }) => {
   }, [cart, product.id]);
 
   const handleAddToCart = (e) => {
-    e.preventDefault(); // عشان الضغط على الزرار ما يفتحش الـ Link
+    e.preventDefault(); 
     if (!isAdded) {
       addToCart(product);
       toast.success("Product added to cart!");
@@ -39,7 +39,7 @@ const ProductCard = ({ product }) => {
         <button
           className={`button ${isAdded ? 'added' : ''}`}
           onClick={handleAddToCart}
-          disabled={isAdded} // يمنع الضغط تاني لو المنتج أضُيف
+          disabled={isAdded}
         >
           {isAdded ? "✅ Added to Cart" : "🛒 Add to Cart"}
         </button>
